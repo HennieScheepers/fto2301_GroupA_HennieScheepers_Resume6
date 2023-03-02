@@ -1,8 +1,11 @@
 body {
     display: flex;
     font-family: 'Courier New', Courier, monospace;
-    margin: 0;
-    padding: 0;
+    position: relative;
+}
+
+h1, h2, h3 {
+    color: #FF4698;
 }
 
 #profilePic {
@@ -11,7 +14,7 @@ body {
     border-radius: 5px;
 }
 
-ul {
+#basicInfo {
     list-style-type: none;
 }
 
@@ -20,8 +23,10 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
     text-align: center;
+    align-self: flex-start;
+    position: sticky;
+    top:15px;
 }
 
 h2 {
@@ -33,7 +38,7 @@ h2 {
 }
 
 #Education {
-
+    margin-bottom: 50px;
 }
 
 #educationSubContainer{
@@ -50,5 +55,9 @@ h2 {
 
 #Skills {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
+}
+
+#skiillsList {
+    list-style-type: none;
 }
