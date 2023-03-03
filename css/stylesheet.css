@@ -1,21 +1,42 @@
 body {
     display: flex;
     font-family: 'Courier New', Courier, monospace;
-    position: relative;
+    margin: 0;
 }
 
-h1, h2, h3 {
+h1, h2 {
     color: #FF4698;
 }
 
+#imageContainer {
+    flex: 1;
+    position: relative;
+}
+
+/*Styling for header whcich is on the left side of the screen*/
 #profilePic {
     width: 90%;
     height: auto;
     border-radius: 5px;
+    object-fit: fill;
+    z-index: 1;
+    position: relative;
+    top: 20px;
 }
 
-#basicInfo {
+#nameAndDetails {
+    margin: 25px;
+    top: 220px;
+    flex: 2;
+    text-align: center;
+}
+
+
+ul {
     list-style-type: none;
+    padding-left: 0;
+    padding-right: 25px;
+    font-weight: bold;
 }
 
 header {
@@ -27,37 +48,49 @@ header {
     align-self: flex-start;
     position: sticky;
     top:15px;
+    
 }
 
 h2 {
     margin: 0;
 }
 
+/*MMain content styling with different sections (Education, experience, etc)*/
 #mainContainer {
     flex: 2;
+    margin: 25px;
 }
 
 #Education {
     margin-bottom: 50px;
 }
 
-#educationSubContainer{
+#educationSubContainer, #experienceSubContainer{
     display: flex;
 }
 
-.qualificationName {
+.qualificationName, .experienceName {
     flex: 1;
 }
 
-.qualificationDescription {
+.qualificationDescription, .experienceDescription {
     flex: 2;
 }
 
-#Skills {
+#Skills, #Hobbies {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+    margin-bottom: 25px;
 }
 
-#skiillsList {
-    list-style-type: none;
+#ColorBlock {
+    height: 100%;
+    width: 100%;
+    background-color: #FF4698;
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    border-radius: 5px;
+    z-index: -1;
 }
+
