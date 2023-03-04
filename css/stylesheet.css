@@ -8,6 +8,10 @@ h1, h2 {
     color: #FF4698;
 }
 
+#basicInfo {
+    font-weight: 300;
+}
+
 #imageContainer {
     flex: 1;
     position: relative;
@@ -61,7 +65,7 @@ h2 {
     margin: 25px;
 }
 
-#Education {
+#Education, #Experience {
     margin-bottom: 50px;
 }
 
@@ -80,17 +84,26 @@ h2 {
 #Skills, #Hobbies {
     display: flex;
     justify-content: flex-start;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
+}
+
+@keyframes colorBlock {
+    0% {width: 100%; height: 0%;}
+    25% {width: 100%; height: 120%;}
+    50% {width: 0%; height: 120%;}
+    75% {width: 100%; height: 120%;}
 }
 
 #ColorBlock {
-    height: 100%;
-    width: 100%;
     background-color: #FF4698;
     position: absolute;
     height: 60%;
     width: 100%;
     border-radius: 5px;
     z-index: -1;
+    animation-name: colorBlock;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
