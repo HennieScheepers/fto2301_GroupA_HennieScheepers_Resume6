@@ -8,6 +8,7 @@ h1, h2 {
     color: #FF4698;
 }
 
+
 #basicInfo {
     font-weight: 300;
 }
@@ -115,22 +116,23 @@ h2 {
 }
 
 @keyframes iconAnimation {
-    10%{transform: rotate(-15deg); filter: invert(13%) sepia(78%) saturate(6318%) hue-rotate(277deg) brightness(90%) contrast(82%);}
-    20%{transform: rotate(0deg); filter: invert(40%) sepia(95%) saturate(1887%) hue-rotate(308deg) brightness(101%) contrast(101%);}
-    30%{transform: rotate(15deg); filter: invert(13%) sepia(78%) saturate(6318%) hue-rotate(277deg) brightness(90%) contrast(82%);}
-    40%{transform: rotate(0deg); filter: invert(40%) sepia(95%) saturate(1887%) hue-rotate(308deg) brightness(101%) contrast(101%);}
-    50%{transform: rotate(-15deg); filter: invert(13%) sepia(78%) saturate(6318%) hue-rotate(277deg) brightness(90%) contrast(82%);}
-    60%{transform: rotate(0deg); filter: invert(40%) sepia(95%) saturate(1887%) hue-rotate(308deg) brightness(101%) contrast(101%);}
-    70%{transform: rotate(15deg); filter: invert(13%) sepia(78%) saturate(6318%) hue-rotate(277deg) brightness(90%) contrast(82%);}
-    80%{transform: rotate(0deg); filter: invert(40%) sepia(95%) saturate(1887%) hue-rotate(308deg) brightness(101%) contrast(101%);}
-    90%{transform: rotate(-15deg); filter: invert(13%) sepia(78%) saturate(6318%) hue-rotate(277deg) brightness(90%) contrast(82%);}
-    100%{transform: rotate(0deg); filter: invert(40%) sepia(95%) saturate(1887%) hue-rotate(308deg) brightness(101%) contrast(101%);}
+    10%{transform: rotate(-15deg) scale(120%); filter: invert(13%) sepia(78%) saturate(6318%) hue-rotate(277deg) brightness(90%) contrast(82%);}
+    20%{transform: rotate(0deg) scale(110%); filter: invert(40%) sepia(95%) saturate(1887%) hue-rotate(308deg) brightness(101%) contrast(101%);}
+    30%{transform: rotate(15deg) scale(120%); filter: invert(13%) sepia(78%) saturate(6318%) hue-rotate(277deg) brightness(90%) contrast(82%);}
+    40%{transform: rotate(0deg) scale(110%); filter: invert(40%) sepia(95%) saturate(1887%) hue-rotate(308deg) brightness(101%) contrast(101%);}
+    50%{transform: rotate(-15deg) scale(120%); filter: invert(13%) sepia(78%) saturate(6318%) hue-rotate(277deg) brightness(90%) contrast(82%);}
+    60%{transform: rotate(0deg) scale(110%); filter: invert(40%) sepia(95%) saturate(1887%) hue-rotate(308deg) brightness(101%) contrast(101%);}
+    70%{transform: rotate(15deg) scale(120%); filter: invert(13%) sepia(78%) saturate(6318%) hue-rotate(277deg) brightness(90%) contrast(82%);}
+    80%{transform: rotate(0deg) scale(110%); filter: invert(40%) sepia(95%) saturate(1887%) hue-rotate(308deg) brightness(101%) contrast(101%);}
+    90%{transform: rotate(-15deg) scale(120%); filter: invert(13%) sepia(78%) saturate(6318%) hue-rotate(277deg) brightness(90%) contrast(82%);}
+    100%{transform: rotate(0deg) scale(110%); filter: invert(40%) sepia(95%) saturate(1887%) hue-rotate(308deg) brightness(101%) contrast(101%);}
 }
 
 .icon:hover {
     animation-name: iconAnimation;
     animation-duration: 5s;
     animation-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+    animation-iteration-count: 1;
 }
 
 li {
