@@ -84,7 +84,7 @@ h2 {
 
 #Skills, #Hobbies {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     margin-bottom: 30px;
 }
 
