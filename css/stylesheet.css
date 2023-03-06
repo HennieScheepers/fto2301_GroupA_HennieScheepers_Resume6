@@ -8,17 +8,13 @@ h1, h2 {
     color: #FF4698;
 }
 
-
-#basicInfo {
-    font-weight: 300;
-}
-
+/*Poistion relative so we can use poistion absolute for colorBlock*/
 #imageContainer {
     flex: 1;
     position: relative;
 }
 
-/*Styling for header whcich is on the left side of the screen*/
+/*Styling for the profile picture*/
 #profilePic {
     width: 90%;
     height: auto;
@@ -29,6 +25,29 @@ h1, h2 {
     top: 20px;
 }
 
+/*Animation for color block on refresh of the page*/
+@keyframes colorBlock {
+    0% {width: 100%; height: 0%;}
+    25% {width: 100%; height: 120%;}
+    50% {width: 0%; height: 120%;}
+    75% {width: 100%; height: 120%;}
+}
+
+/*Styling for the color block*/
+#ColorBlock {
+    background-color: #FF4698;
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    border-radius: 5px;
+    z-index: -1;
+    animation-name: colorBlock;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/*Basic styling for the nameAndDetails section*/
 #nameAndDetails {
     margin: 25px;
     top: 220px;
@@ -36,7 +55,7 @@ h1, h2 {
     text-align: center;
 }
 
-
+/*Styling for lists in general*/
 ul {
     list-style-type: none;
     padding-left: 0;
@@ -44,6 +63,7 @@ ul {
     font-weight: bold;
 }
 
+/*Styling for the header section to be displayed on the left*/
 header {
     flex: 1;
     display: flex;
@@ -52,15 +72,14 @@ header {
     text-align: center;
     align-self: flex-start;
     position: sticky;
-    top:15px;
-    
+    top:15px;  
 }
 
 h2 {
     margin: 0;
 }
 
-/*MMain content styling with different sections (Education, experience, etc)*/
+/*Main content styling with different sections (Education, experience, etc)*/
 #mainContainer {
     flex: 2;
     margin: 25px;
@@ -88,26 +107,7 @@ h2 {
     margin-bottom: 30px;
 }
 
-@keyframes colorBlock {
-    0% {width: 100%; height: 0%;}
-    25% {width: 100%; height: 120%;}
-    50% {width: 0%; height: 120%;}
-    75% {width: 100%; height: 120%;}
-}
-
-#ColorBlock {
-    background-color: #FF4698;
-    position: absolute;
-    height: 60%;
-    width: 100%;
-    border-radius: 5px;
-    z-index: -1;
-    animation-name: colorBlock;
-    animation-duration: 3s;
-    animation-iteration-count: 1;
-    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-}
-
+/*Styling for icons*/
 .icon {
     height: 20px;
     width: 20px;
@@ -115,24 +115,28 @@ h2 {
     filter: invert(40%) sepia(95%) saturate(1887%) hue-rotate(308deg) brightness(101%) contrast(101%);
 }
 
+/*Keyframes for icon when hovering over it*/
 @keyframes iconAnimation {
-    10%{transform: rotate(-15deg) scale(120%); filter: invert(13%) sepia(78%) saturate(6318%) hue-rotate(277deg) brightness(90%) contrast(82%);}
-    20%{transform: rotate(0deg) scale(110%); filter: invert(40%) sepia(95%) saturate(1887%) hue-rotate(308deg) brightness(101%) contrast(101%);}
-    30%{transform: rotate(15deg) scale(120%); filter: invert(13%) sepia(78%) saturate(6318%) hue-rotate(277deg) brightness(90%) contrast(82%);}
-    40%{transform: rotate(0deg) scale(110%); filter: invert(40%) sepia(95%) saturate(1887%) hue-rotate(308deg) brightness(101%) contrast(101%);}
-    50%{transform: rotate(-15deg) scale(120%); filter: invert(13%) sepia(78%) saturate(6318%) hue-rotate(277deg) brightness(90%) contrast(82%);}
-    60%{transform: rotate(0deg) scale(110%); filter: invert(40%) sepia(95%) saturate(1887%) hue-rotate(308deg) brightness(101%) contrast(101%);}
-    70%{transform: rotate(15deg) scale(120%); filter: invert(13%) sepia(78%) saturate(6318%) hue-rotate(277deg) brightness(90%) contrast(82%);}
-    80%{transform: rotate(0deg) scale(110%); filter: invert(40%) sepia(95%) saturate(1887%) hue-rotate(308deg) brightness(101%) contrast(101%);}
-    90%{transform: rotate(-15deg) scale(120%); filter: invert(13%) sepia(78%) saturate(6318%) hue-rotate(277deg) brightness(90%) contrast(82%);}
+    8.3%{transform: rotate(-15deg) scale(120%); filter: invert(13%) sepia(78%) saturate(6318%) hue-rotate(277deg) brightness(90%) contrast(82%);}
+    16.6%{transform: rotate(0deg) scale(110%); filter: invert(40%) sepia(95%) saturate(1887%) hue-rotate(308deg) brightness(101%) contrast(101%);}
+    24.9%{transform: rotate(15deg) scale(120%); filter: invert(13%) sepia(78%) saturate(6318%) hue-rotate(277deg) brightness(90%) contrast(82%);}
+    33.26%{transform: rotate(0deg) scale(110%); filter: invert(40%) sepia(95%) saturate(1887%) hue-rotate(308deg) brightness(101%) contrast(101%);}
+    41.6%{transform: rotate(-15deg) scale(120%); filter: invert(13%) sepia(78%) saturate(6318%) hue-rotate(277deg) brightness(90%) contrast(82%);}
+    50%{transform: rotate(0deg) scale(110%); filter: invert(40%) sepia(95%) saturate(1887%) hue-rotate(308deg) brightness(101%) contrast(101%);}
+    58.3%{transform: rotate(15deg) scale(120%); filter: invert(13%) sepia(78%) saturate(6318%) hue-rotate(277deg) brightness(90%) contrast(82%);}
+    66.6%{transform: rotate(0deg) scale(110%); filter: invert(40%) sepia(95%) saturate(1887%) hue-rotate(308deg) brightness(101%) contrast(101%);}
+    74.9%{transform: rotate(-15deg) scale(120%); filter: invert(13%) sepia(78%) saturate(6318%) hue-rotate(277deg) brightness(90%) contrast(82%);}
+    83.2%{transform: rotate(0deg) scale(110%); filter: invert(40%) sepia(95%) saturate(1887%) hue-rotate(308deg) brightness(101%) contrast(101%);}
+    91.5%{transform: rotate(15deg) scale(120%); filter: invert(13%) sepia(78%) saturate(6318%) hue-rotate(277deg) brightness(90%) contrast(82%);}
     100%{transform: rotate(0deg) scale(110%); filter: invert(40%) sepia(95%) saturate(1887%) hue-rotate(308deg) brightness(101%) contrast(101%);}
 }
 
+/*Animation for on hover of icons*/
 .icon:hover {
     animation-name: iconAnimation;
     animation-duration: 5s;
     animation-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
-    animation-iteration-count: 1;
+    animation-iteration-count: infinite;
 }
 
 li {
